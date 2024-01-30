@@ -73,7 +73,7 @@ Please submit the following as part of your assignment:
 
 1. Link to your GitHub repository
 2. (Optional) Link to the Figma design files
-2. (Optional) Link to the deployed site
+3. (Optional) Link to the deployed site
 
 ## Evaluation Criteria
 
