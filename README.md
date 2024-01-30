@@ -118,7 +118,15 @@ interface TodoList {
 }
 ```
 
-*You might have to do some searching for how these are implmented, [secret hint](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)*
+_You might have to do some searching for how these are implmented, [secret hint](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)_
+
+<details>
+<summary>Nice stuff you can do with these</summary>
+
+- Setup the update display to be run everytime the todolist changes
+- Setup a new function for persisting the Todo List to [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) whenever it changes
+
+<details>
 
 ## Links
 
