@@ -5,7 +5,14 @@ import { mark_button } from "./utilities.js";
  *
  * @returns {Todo}
  */
-export function getAllTodoes() {}
+export function getAllTodoes() {
+  console.log("helleo world");
+  const ul = document.querySelector("ul");
+  if (ul.hasChildNodes()) {
+    console.log("helleo world");
+    console.log(ul.querySelector("li"));
+  }
+}
 
 /**
  * Creates a new Todo based on the passed

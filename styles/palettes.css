@@ -7,7 +7,12 @@
   --color-white: #f0f0f0;
   --color-black: #0f0f0f;
 }
-
+.fill-primary {
+  fill: var(--color-primary);
+}
+.fill-black {
+  fill: var(--color-black);
+}
 .bg-primary {
   background-color: var(--color-primary);
 }

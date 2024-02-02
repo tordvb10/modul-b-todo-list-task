@@ -15,4 +15,5 @@ knapp.addEventListener("click", function () {
     ToDoLists.push(todoel);
     todoList.updateDisplay(ToDoLists);
   }
+  todoList.getAllTodoes();
 });
