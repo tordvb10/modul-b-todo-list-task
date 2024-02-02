@@ -1,4 +1,47 @@
 /* All the overwriting of the default User Stylesheet are overwritten here */
 body {
   margin: 0px;
+  height: 100vh;
+}
+ul {
+  padding: 0px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 5px 10%;
+  position: relative;
+}
+li {
+  padding: 0 10px;
+  list-style: none;
+  margin: 0px;
+  border-radius: 5px;
+  position: relative;
+}
+li > p {
+  padding-right: 20px;
+}
+
+.inputels {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.inputels > * {
+  align-self: center;
+  gap: 10px;
+}
+#inputbutton {
+  width: fit-content;
+}
+#inputtext {
+  width: 80%;
+  min-height: 50px;
+}
+.delete {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
 }

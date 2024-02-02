@@ -1,3 +1,5 @@
+import { createTodoElement } from "./createTodoElement.js";
+
 /**
  * Returns all the Todoes in a list
  *
@@ -19,7 +21,7 @@ export function addTodo(data) {
   todo.createdAt = new Date();
   todo.updatetAt = new Date();
   todo.isComplete = true;
-  todo.id = Math.random();
+  todo.id = new Date().getTime();
   return todo;
 }
 
@@ -27,6 +29,6 @@ export function updateDisplay(TodoLists) {
   const maingrow = document.querySelector(".itsgrowing");
   maingrow.innerHTML = "";
   TodoLists.forEach((el) => {
-    maingrow.innerHTML += el.title;
+    maingrow.innerHTML += createTodoElement(el);
   });
 }

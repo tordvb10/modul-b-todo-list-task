@@ -8,25 +8,16 @@ const maingrow = document.querySelector(".itsgrowing");
 const knapp = document.querySelector("#inputbutton");
 const text = document.querySelector("#inputtext");
 let ToDoLists = [];
-let todoel = todoList.addTodo(createTodoElement("heisann"));
-console.log(todoel);
-maingrow.innerHTML = "";
+//maingrow.innerHTML = "";
 
 knapp.addEventListener("click", function () {
-  console.log(maingrow.childElementCount);
   let nytext = text.value;
-
   if (nytext.length !== 0) {
-    let nextTodo = createTodoElement(text.value);
-    todoel = todoList.addTodo(nextTodo);
+    let todoel = todoList.addTodo(nytext);
     ToDoLists.push(todoel);
     todoList.updateDisplay(ToDoLists);
   }
 });
-
-function myfunction() {
-  console.log("hello world");
-}
 
 //maingrow.innerHTML = todoel.title;
 //maingrow.innerHTML = "";
