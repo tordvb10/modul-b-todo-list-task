@@ -8,11 +8,12 @@
  * @returns {HTMLElement}
  */
 export function createTodoElement(data) {
+  console.log(data);
   let htmlEL = `
-          <li class="bg-primary text-secondary">
+          <li id="li_${data.id}" class="bg-primary text-secondary">
             <p>${data.title}</p>
             <p>Created at ${data.createdAt.toLocaleDateString()}, ${data.createdAt.toLocaleTimeString()}</p>
-            <button class="delete bg-primary">
+            <button id="button_${data.id}" class="delete bg-primary">
               <svg
                 width="20"
                 height="20"
@@ -22,11 +23,21 @@ export function createTodoElement(data) {
               >
                 <path
                   d="M32.5 60L10 37.5L13.535 33.965L32.5 52.9275L66.465 18.965L70 22.5L32.5 60Z"
-                  fill="text-secondary"
+                  fill="${data.isComplete ? "black" : "text - secondary"}"
                 />
               </svg>
             </button>
           </li>
     `;
+  return htmlEL;
+}
+
+export function fixIsMarkd(data) {
+  let htmlEL = `
+    <path
+      d="M32.5 60L10 37.5L13.535 33.965L32.5 52.9275L66.465 18.965L70 22.5L32.5 60Z"
+      fill="${data.isComplete ? "black" : "text - secondary"}"
+    />
+  `;
   return htmlEL;
 }
