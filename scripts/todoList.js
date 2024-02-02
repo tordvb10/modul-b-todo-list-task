@@ -19,7 +19,7 @@ export function addTodo(data) {
   let todo = {};
   todo.title = data;
   todo.createdAt = new Date();
-  todo.updatetAt = new Date();
+  todo.updatedAt = new Date();
   todo.isComplete = false;
   todo.id = new Date().getTime();
   return todo;
@@ -33,11 +33,8 @@ export function updateDisplay(TodoLists) {
   });
   TodoLists.forEach((el) => {
     let ToBeMarked = document.querySelector("#button_" + el.id);
-    console.log(ToBeMarked);
     ToBeMarked.addEventListener("click", () => {
       mark_button(el);
     });
-    console.log(el);
   });
-  console.log(TodoLists);
 }

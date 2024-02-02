@@ -12,6 +12,10 @@
 import { fixIsMarkd } from "./createTodoElement.js";
 
 export function mark_button(el) {
+  el.updatedAt = new Date();
   el.isComplete = el.isComplete ? false : true;
-  document.querySelector(`#li_${el.id} button svg`).innerHTML = fixIsMarkd(el);
+  document.querySelector(`#li_${el.id}`).innerHTML = fixIsMarkd(el);
+  document.querySelector("#button_" + el.id).addEventListener("click", () => {
+    mark_button(el);
+  });
 }
