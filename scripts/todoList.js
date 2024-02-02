@@ -10,7 +10,11 @@ export function getAllTodoes() {
   const ul = document.querySelector("ul");
   if (ul.hasChildNodes()) {
     console.log("helleo world");
-    console.log(ul.querySelector("li"));
+    let liel;
+    for (let i = 0; i < ul.childElementCount; i++) {
+      liel = ul.children[i];
+      console.log(liel);
+    }
   }
 }
 
