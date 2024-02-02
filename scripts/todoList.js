@@ -12,4 +12,21 @@ export function getAllTodoes() {}
  * @param {TodoCreationInfo} data
  * @returns {Todo}
  */
-export function addTodo(data) {}
+
+export function addTodo(data) {
+  let todo = {};
+  todo.title = data;
+  todo.createdAt = new Date();
+  todo.updatetAt = new Date();
+  todo.isComplete = true;
+  todo.id = Math.random();
+  return todo;
+}
+
+export function updateDisplay(TodoLists) {
+  const maingrow = document.querySelector(".itsgrowing");
+  maingrow.innerHTML = "";
+  TodoLists.forEach((el) => {
+    maingrow.innerHTML += el.title;
+  });
+}

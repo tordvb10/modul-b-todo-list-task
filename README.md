@@ -34,7 +34,7 @@ type TodoCreationInfo = {
  */
 interface TodoList {
   getAllTodoes: () => Todo[];
-  addTodo:      (data: TodoCreationInfo) => boolean;
+  addTodo: (data: TodoCreationInfo) => boolean;
 }
 ```
 
@@ -95,11 +95,11 @@ For those who want to challenge themselves further, consider expanding the TodoL
 interface TodoList {
   // Existing methods...
 
-  markTodoComplete:   (todoId: number) => boolean;
-  deleteTodo:         (todoId: number) => boolean;
-  getCompletedTodos:  () => Todo[];
+  markTodoComplete: (todoId: number) => boolean;
+  deleteTodo: (todoId: number) => boolean;
+  getCompletedTodos: () => Todo[];
   getIncompleteTodos: () => Todo[];
-  updateTodoTitle:    (todoId: number, newTitle: string) => boolean;
+  updateTodoTitle: (todoId: number, newTitle: string) => boolean;
 }
 ```
 
